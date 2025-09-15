@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <form action="">
+        <label for="title">제목:</label>
+        <textarea id="title" name="title" placeholder="제목을 입력하세요"></textarea>
+        <br>
+        <label for="content">내용:</label>
+        <input type="text" name="content" id="content" placeholder="내용을 입력하세요">
+        <br>
+        <button type="submit">메모 저장</button>
+    </form>
+</div>
+<br>
+<div>
+    <h2>숙소 예약하기</h2>
+    <form action="">
+        <div>
+            <label>체크인:
+                <input type="date" name="checkIn">
+            </label>
+            <br>
+            <label>체크아웃:
+                <input type="date" name="checkOut">
+            </label>
+        </div>
+        <div>
+            <label for="adult">성인: </label>
+            <input type="number" name="adult" id="adult" value="1" min="1" max="10">
+            <br>
+            <label for="child">어린이: </label>
+            <input type="number" name="child" id="child" value="0" min="0">
+        </div>
+        <div>
+            <label for="standard"></label>
+            <input type="radio" name="roomType" id="standard">
+            <span>스탠다드</span>
+            <label for="deluxe"></label>
+            <input type="radio" name="roomType" id="deluxe">
+            <span>디럭스</span>
+            <label for="sweet"></label>
+            <input type="radio" name="roomType" id="sweet">
+            <span>스위트</span>
+        </div>
+        <div>
+            <label for="request">요청사항</label>
+            <textarea name="request" id="request" placeholder="특별히 요청하고 싶은 내용을 적어주세요"></textarea>
+        </div>
+        <button type="submit">제출하기</button>
+    </form>
+</div>
+</body>
+</html>
