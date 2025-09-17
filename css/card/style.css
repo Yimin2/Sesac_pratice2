@@ -1,0 +1,49 @@
+/*
+border 관련
+border-radius 속성
+border-width 속성
+border-color 속성
+font 관련
+font-size 속성
+font-weight 속성
+background-color
+color
+margin
+padding
+text-align*/
+
+.card-container {
+    background-color: rgba(204, 202, 202, 0.5);
+    padding: 2rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+}
+
+.card-header {
+    font-weight: bold;
+    border-bottom: solid rgba(204, 202, 202, 0.2) 1px;
+    font-size: 3rem;
+}
+
+.card-body {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.5) ;
+    border-bottom: solid rgba(204, 202, 202, 0.2) 1px;
+}
+
+.card-footer {
+    background-color: rgba(204, 202, 202, 0.1);
+}
+
+.tag {
+    border-radius: 15px;
+    background-color: rgba(204, 202, 202, 0.5);
+    padding: 5px;
+    margin: 5px;
+}
+.padding {
+    padding: 3rem;
+}
