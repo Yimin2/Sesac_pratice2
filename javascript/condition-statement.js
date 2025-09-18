@@ -371,3 +371,14 @@ if (drinkType === "coffee") {
 /* 출력 결과
 음료수만 가능
 */
+
+
+// 삼항연산자
+let a = 0
+let b = 1
+let c = a > b ? a : b
+console.log(c)
+
+let isLoggined = false
+let message = isLoggined ? "환영합니다" : "로그인이 필요합니다"
+console.log(message)
