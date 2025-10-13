@@ -1,19 +1,28 @@
 import {createBrowserRouter} from "react-router-dom";
-import Home from "../pages/Home";
-import Products from "../pages/Products.jsx";
-import Carts from "../pages/Carts.jsx";
-import Posts from "../pages/Posts.jsx";
+
+import RootLayout from "../layouts/RootLayout.jsx";
+import DummyLayout from "../layouts/DummyLayout.jsx";
+
+import Home from "../pages/RootPages/Home.jsx";
+import Carts from "../pages/DummyPages/Carts.jsx";
+import Posts from "../pages/DummyPages/Posts.jsx";
+import Products from "../pages/DummyPages/Products.jsx";
+
 
 const router = createBrowserRouter([{
-    path: "/", Component: Home,
+    path: "/", Component: RootLayout, children: [{index: true, Component: Home}]
 }, {
-    path: "/dummy/products", Component: Products,
-}, {
-    path: "/dummy/carts", Component: Carts,
-}, {
-    path: "/dummy/posts", Component: Posts,
-},
-
+    path: "/dummy", Component: DummyLayout, children: [{
+        path: "carts",
+        Component: Carts
+    }, {
+        path: "posts",
+        Component: Posts
+    }, {
+        path: "products",
+        Component: Products
+    }]
+}
 ]);
 
 export default router;
