@@ -10,10 +10,12 @@ const PATHS = {
         INDEX: "/dummy",
         POSTS: "/dummy/posts",
         PRODUCTS: "/dummy/products",
+        CARTS: "/dummy/carts",
 
         // 동적 경로
         // 라우터 정의에 사용되는 문자열 패턴
         POST_DETAIL: "/dummy/posts/:postId",
+        PRODUCT_DETAIL: "/dummy/products/:productId",
 
         // Link 컴포넌트와 useNavigate() 훅에서 사용하는 함수
         getPostDetailPath: (postId) => `/dummy/posts/${postId}`,

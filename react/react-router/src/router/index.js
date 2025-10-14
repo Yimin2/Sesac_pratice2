@@ -1,31 +1,14 @@
 import {createBrowserRouter} from "react-router-dom";
-
-import RootLayout from "../layouts/RootLayout.jsx";
-import DummyLayout from "../layouts/DummyLayout.jsx";
-
-import Home from "../pages/RootPages/Home.jsx";
-import Carts from "../pages/DummyPages/Carts.jsx";
-import Posts from "../pages/DummyPages/Posts.jsx";
-import Products from "../pages/DummyPages/Products.jsx";
-import PostDetail from "../pages/DummyPages/PostDetail.jsx";
-import ProductDetail from "../pages/DummyPages/ProductDetail.jsx";
-import PATHS from "../constants/paths";
+import mainRoutes from "./routes/mainRoutes.jsx";
+import NotFounds from "../pages/RootPages/NotFounds.jsx";
 
 
-const router = createBrowserRouter([{
-    path: PATHS.ROOT.INDEX, Component: RootLayout, children: [{index: true, Component: Home}]
-}, {
-    path: PATHS.DUMMY.INDEX, Component: DummyLayout, children: [{
-        path: "carts", Component: Carts
-    }, {
-        path: "posts", Component: Posts
-    }, {
-        path: "posts/:postId", Component: PostDetail
-    }, {
-        path: "products", Component: Products
-    }, {
-        path: "products/:productId", Component: ProductDetail
-    }]
-}]);
+const router = createBrowserRouter([
+    ...mainRoutes,
+    {
+        path:"*",
+        Component:NotFounds
+    }
+]);
 
 export default router;
