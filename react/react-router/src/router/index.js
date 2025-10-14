@@ -7,22 +7,25 @@ import Home from "../pages/RootPages/Home.jsx";
 import Carts from "../pages/DummyPages/Carts.jsx";
 import Posts from "../pages/DummyPages/Posts.jsx";
 import Products from "../pages/DummyPages/Products.jsx";
+import PostDetail from "../pages/DummyPages/PostDetail.jsx";
+import ProductDetail from "../pages/DummyPages/ProductDetail.jsx";
+import PATHS from "../constants/paths";
 
 
 const router = createBrowserRouter([{
-    path: "/", Component: RootLayout, children: [{index: true, Component: Home}]
+    path: PATHS.ROOT.INDEX, Component: RootLayout, children: [{index: true, Component: Home}]
 }, {
-    path: "/dummy", Component: DummyLayout, children: [{
-        path: "carts",
-        Component: Carts
+    path: PATHS.DUMMY.INDEX, Component: DummyLayout, children: [{
+        path: "carts", Component: Carts
     }, {
-        path: "posts",
-        Component: Posts
+        path: "posts", Component: Posts
     }, {
-        path: "products",
-        Component: Products
+        path: "posts/:postId", Component: PostDetail
+    }, {
+        path: "products", Component: Products
+    }, {
+        path: "products/:productId", Component: ProductDetail
     }]
-}
-]);
+}]);
 
 export default router;
